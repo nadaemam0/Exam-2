@@ -1,0 +1,87 @@
+:root {
+    --first-color: #0d0d0d;
+    --second-color: white;
+    --third-color: black;
+    --fourth-color: #f9f6f6ca;
+    --fifth-color: #ced4da;
+    --duration: .5s;
+}
+
+body {
+    background-color: var(--first-color);
+    overflow: hidden;
+}
+
+#name, #letter {
+    border-color: var(--fifth-color) !important;
+    color: var(--second-color) !important;
+}
+
+#name::placeholder, #letter::placeholder {
+    color: grey !important;
+}
+
+.outer-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--first-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav-bar {
+    width: 20rem;
+    position: fixed;
+    left: -16rem;
+    top: 0;
+}
+
+.right {
+    width: 4rem;
+    background-color: var(--second-color);
+}
+
+.left {
+    width: 16rem;
+    color: var(--second-color);
+    background-color: var(--first-color);
+}
+
+.left li {
+    text-decoration: none;
+    display: block;
+    padding: 8px 0px;
+}
+
+.meal, .area, .ingredient {
+    cursor: pointer;
+}
+
+.meal-layer {
+    top: 100%;
+    left: 0;
+    height: 100%;
+    transition: all var(--duration);
+    background-color: rgba(250, 250, 250, .7);
+}
+
+.meal:hover .meal-layer {
+    top: 0;
+}
+
+@media screen and (max-width:992px) {
+    .right{
+        height: fit-content;
+        padding: 10px !important;
+        width: 3rem;
+    }
+    .right img, .right .icons{
+        display: none !important;
+    }
+}
